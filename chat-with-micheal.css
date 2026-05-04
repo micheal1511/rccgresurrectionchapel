@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    /* padding: 20px; */
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* background-color: white; */
+    border-radius: 15px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+    overflow: hidden;
+} 
+.contain {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+} 
+.head {
+    background:linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}       
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}        
+.whatsapp-icon {
+    font-size: 2.8rem;
+    margin-right: 15px;
+}     
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}      
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}       
+.form-container {
+    padding: 30px;
+}     
+.form-group {
+    margin-bottom: 25px;
+}        
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}        
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}        
+input:focus, textarea:focus {
+    border-color: #25D366;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+}        
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}     
+.file-input-container {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s;
+}        
+.file-input-container:hover {
+    border-color: #25D366;
+    background-color: #f9f9f9;
+}        
+.file-input-label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+}      
+.file-input-label i {
+    font-size: 2.5rem;
+    color: #25D366;
+    margin-bottom: 10px;
+}        
+#file-chosen {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #888;
+}     
+#image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}       
+.preview-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}        
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}       
+.send-button {
+    background: linear-gradient(to right, #25D366, #128C7E);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}        
+.send-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}        
+.send-button:active {
+    transform: translateY(0);
+}        
+.send-button i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}        
+.instructions {
+    background-color: #f0f9ff;
+    border-left: 4px solid #25D366;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 0 8px 8px 0;
+}        
+.instructions h3 {
+    color: #128C7E;
+    margin-bottom: 10px;
+}        
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}        
+.required {
+    color: #e63946;
+}     
+.phone-input-container {
+    display: flex;
+    align-items: center;
+}      
+.phone-prefix {
+    background-color: #f1f1f1;
+    padding: 14px 15px;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    font-weight: 600;
+}        
+#phone {
+    border-radius: 0 8px 8px 0;
+}      
+@media (max-width: 600px) {
+    .container {
+        border-radius: 10px;
+    }            
+    .head {
+        padding: 25px 20px;
+    }      
+    h1 {
+        font-size: 1.8rem;
+    }        
+    .form-container {
+        padding: 25px 20px;
+    }       
+    .send-button {
+        width: 100%;
+        justify-content: center;
+    }
+}

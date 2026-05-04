@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading - RCCG Resurrection Chapel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="icon" type="x-icon" href="image/rccg-logo.png">
+</head>
+<body>
+    <!-- Loading Page -->
+    <div class="loading-container" id="loadingPage">
+        <div class="logo">
+            <h1><i class="fas fa-globe-africa"></i> Resurrection Chapel</h1>
+            <p>Connecting you to divine inspiration and spiritual growth. Please wait while we ensure optimal connection quality...</p>
+        </div>
+        
+        <div class="loading-animation">
+            <div class="spinner"></div>
+            <div class="center-icon">
+                <i class="fas fa-wifi"></i>
+            </div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="status-container">
+            <div class="status-item">
+                <div class="status-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="status-text">
+                    <h3>CONNECTION STATUS</h3>
+                    <p id="connectionStatus" class="connection-status">Checking...</p>
+                </div>
+            </div>
+            
+            <div class="status-item">
+                <div class="status-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <div class="status-text">
+                    <h3>NETWORK SPEED</h3>
+                    <p id="networkSpeed" class="speed-status">Testing...</p>
+                </div>
+            </div>
+            
+            <div class="status-item">
+                <div class="status-icon">
+                    <i class="fas fa-door-open"></i>
+                </div>
+                <div class="status-text">
+                    <h3>ACCESS STATUS</h3>
+                    <p id="accessStatus" class="access-status">Pending</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="message-box" id="messageBox">
+            <p><i class="fas fa-exclamation-triangle"></i> <span id="messageText">Your network connection is too slow. Please connect to a faster network (3G or above) then retry.</span></p>
+        </div>
+        
+        <div class="auto-redirect-notice" id="autoRedirectNotice">
+            <p>If page does not redirect you to the home page in <span class="countdown" id="countdown">5</span> seconds..., <br> Please Click on the Enter Homepage button below. </p>
+        </div>
+        
+        <div class="button-container" style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <button class="btn" id="enterBtn"><a href="home.html" style="color: white;">
+                Enter Homepage <i class="fas fa-arrow-right"></i></a>
+            </button>
+            <button class="btn btn-retry" id="retryBtn">
+                <a href="index.html" style="color: white;"><i class="fas fa-redo"></i> Retry Connection Test</a>
+            </button>
+        </div>
+    </div>
+    
+    <script src="loading.js"></script>
+</body>
+</html>

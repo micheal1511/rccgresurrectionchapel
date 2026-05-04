@@ -1,0 +1,152 @@
+/* 3D SCENE */
+    .scene {
+      perspective: 1500px;
+      perspective-origin: 50% 45%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .cube-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 480px;
+      width: 100%;
+    }
+    .cube {
+      position: relative;
+      width: 100%;
+      max-width: 620px;
+      aspect-ratio: 1 / 0.85;
+      transform-style: preserve-3d;
+      transition: transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      cursor: grab;
+    }
+    .cube:active {
+      cursor: grabbing;
+    }
+    /* face common */
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #1f1b16;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -8px black;
+      border: 1px solid rgba(218, 185, 120, 0.5);
+      backface-visibility: visible;
+    }
+    .face img, .face video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .media-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      padding: 18px 14px 12px;
+      color: #f2e2c6;
+      font-weight: 500;
+      font-size: 0.85rem;
+      pointer-events: none;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      font-family: monospace;
+    }
+    /* dynamic depth will be set by js, default fallback */
+    .front { transform: translateZ(280px); }
+    .back { transform: rotateY(180deg) translateZ(280px); }
+    .right { transform: rotateY(90deg) translateZ(280px); }
+    .left { transform: rotateY(-90deg) translateZ(280px); }
+
+    /* control panel */
+    .button-panel {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 32px 0 20px;
+      flex-wrap: wrap;
+    }
+    .ctrl-btn {
+      background: #2c241e;
+      border: none;
+      width: 56px;
+      height: 56px;
+      border-radius: 60px;
+      font-size: 1.8rem;
+      color: #f0dbb4;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 6px 14px black;
+    }
+    .ctrl-btn:hover {
+      background: #c69c5c;
+      color: #1f1a14;
+      transform: scale(1.05);
+    }
+    .auto-toggle {
+      background: #3c3228;
+      padding: 0 20px;
+      width: auto;
+      font-size: 1rem;
+      font-weight: 600;
+      gap: 8px;
+      display: inline-flex;
+      align-items: center;
+    }
+    /* indicator strip for many faces */
+    .carousel-dots {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0 12px;
+    }
+    .face-dot {
+      background: #4d3e2e;
+      border-radius: 36px;
+      padding: 6px 16px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #dbbc8c;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .face-dot i {
+      font-size: 0.7rem;
+    }
+    .face-dot.active {
+      background: #e2b169;
+      color: #241e17;
+      box-shadow: 0 0 6px #ffcd8a;
+    }
+    .info-text {
+      text-align: center;
+      color: #b9a27b;
+      font-size: 0.75rem;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 650px) {
+      .cube-wrapper { min-height: 380px; }
+      .ctrl-btn { width: 48px; height: 48px; font-size: 1.3rem; }
+      .face-dot { padding: 3px 12px; font-size: 0.65rem; }
+    }
+    /* swipe hint */
+    .swipe-note {
+      background: rgba(0,0,0,0.5);
+      border-radius: 60px;
+      padding: 4px 12px;
+      font-size: 0.7rem;
+    }

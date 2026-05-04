@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - RCCG Resurrection Chapel</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="gallery-cube.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="rccg-logo.png">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="rccg-logo.png" alt="RCCG Logo">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="home.html" class="active">Home</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="mission-vision.html">Mission and Vision</a></li>
+                        <li><a href="our-beliefs.html">Our Beliefs</a></li>
+                        <li><a href="online-reading.html">Online Reading</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="mission-vision.html">Mission and Vision</a></li>
+                <li><a href="our-beliefs.html">Our Beliefs</a></li>
+                <li><a href="online-reading.html">Online Reading</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">THE REDEEMED CHRISTIAN CHURCH OF GOD <br>RESURRECTION CHAPEL</h1>
+                    <h2 class="hero-subtitle">(Area Headquarters) <span>Pastors Number: 08037148341</span></h2>
+                    <p class="hero-verse">Jesus Christ the same yesterday, today, and forever <span class="verse-ref">– Hebrews 13:8</span></p>
+                    
+                    <!-- Live Time Display -->
+                    <div class="live-time" id="liveTime">
+                        11:22:31 AM
+                    </div>
+                    
+                    <!-- Statistics -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">197+</div>
+                            <div class="stat-label">Countries & Members</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">9M+</div>
+                            <div class="stat-label">Worldwide</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Parishes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- General Overseer Section -->
+        <section class="go-section animate-on-scroll">
+            <div class="container">
+                <div class="go-content">
+                    <div class="go-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="go-info">
+                        <h2 class="go-title">Pastor E.A Adeboye</h2>
+                        <h3 class="go-position">The General Overseer Of The Redeemed Christian Church Of God Worldwide</h3>
+                        <p class="go-married"><strong>Married To A Beautiful Wife</strong></p>
+                        <h4 class="wife-name">Pst Mrs Folu Adenike Adeboye</h4>
+                        <div class="family-info">
+                            <p class="blessed">Blessed With</p>
+                            <div class="family-stats">
+                                <div class="family-stat">
+                                    <div class="family-number">4</div>
+                                    <div class="family-label">Children</div>
+                                </div>
+                                <div class="family-stat">
+                                    <div class="family-number">9,999,617+</div>
+                                    <div class="family-label">Children In Faith</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="welcome-message">
+                            <p><span id="typing-effect" class="typing-effect"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cube-container animate-on-scroll"></div>
+            <div class="scene">
+                <div class="cube-wrapper">
+                <div class="cube" id="dynamicCube">
+                    <!-- faces will be generated dynamically by JavaScript -->
+                </div>
+                </div>
+            </div>
+            <div class="button-panel">
+                <button class="ctrl-btn" id="prevBtn"><i class="fas fa-arrow-left"></i></button>
+                <button class="ctrl-btn" id="nextBtn"><i class="fas fa-arrow-right"></i></button>
+                <button style="display:none;" class="ctrlbtn auto-toggle" id="autoRotateToggle"></button>
+            </div>
+          <div style="display:none;" id="dotsContainer" class="carousel-dots"></div>
+          <div class="info-text">
+            <span><i class="fas fa-fingerprint"></i> Swipe left or right to rotate</span>
+            <a href="gallery.html" style="text-decoration:none;"><span><i class="fas fa-video"></i>Click to view more Images/Videos</span></a>
+          </div>
+        </div>
+        <!-- Programs Section -->
+        <section class="programs-section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Weekly Programs</h2>
+                <div class="programs-grid">
+                    <!-- Digging Deep -->
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-digging"></i>
+                        </div>
+                        <h3 class="program-name">Digging Deep</h3>
+                        <p class="program-schedule">Every Tuesday of the year</p>
+                        <div class="program-details">
+                            <p><i class="far fa-clock"></i> Time: 5:30pm - 6:30pm</p>
+                            <p><i class="fas fa-church"></i> RCCG Resurrection Chapel Area HQ</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Faith Clinic -->
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="program-name">Faith Clinic</h3>
+                        <p class="program-schedule">Every Thursday of the year</p>
+                        <div class="program-details">
+                            <p><i class="far fa-clock"></i> Time: 5:30pm - 6:30pm</p>
+                            <p><i class="fas fa-church"></i> RCCG Resurrection Chapel Area HQ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monthly Programs -->
+        <section class="monthly-programs animate-on-scroll">
+            <div class="container">
+                <div class="programs-container">
+                    <!-- End of Month Programs -->
+                    <div class="monthly-program">
+                        <h3 class="program-header">End of the Month Programs</h3>
+                        <div class="program-item">
+                            <h4 class="item-title">Praise Night</h4>
+                            <p class="item-detail">Every Last Thursday Of The Month</p>
+                            <p class="item-time">5:00pm - 7:00pm</p>
+                        </div>
+                        <div class="program-item">
+                            <h4 class="item-title">Holy Communion Service</h4>
+                            <p class="item-detail">On The Last Friday Of The Month</p>
+                            <p class="item-time">5:00pm - 7:00pm</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Beginning of Month Programs -->
+                    <div class="monthly-program">
+                        <h3 class="program-header">Beginning of the Month Programs</h3>
+                        <div class="program-item">
+                            <h4 class="item-title">"First Day With Jesus"</h4>
+                            <p class="item-detail">Every First Day Of The Month</p>
+                            <p class="item-time">5:45am - 7:00am</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tithes & Offerings Section -->
+        <section class="giving-section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Payment Of Tithe/Offering: The Secret To Overwhelming Blessings</h2>
+                
+                <!-- Account Details -->
+                <div class="account-details">
+                    <div class="account-card">
+                        <h3 class="account-title">Account Details</h3>
+                        <div class="account-info">
+                            <p><strong>Account Number:</strong> 4150011324</p>
+                            <p><strong>Bank:</strong> Fidelity Bank</p>
+                            <p><strong>Account Name:</strong> RCCG Resurrection Chapel Area HQ Aba-Ibeji</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bible Teaching -->
+                <div class="bible-teaching">
+                    <p>The Bible is replete with virtually inexhaustible provisions for Man's comfort here on earth and in eternity. The oldest singular limitation is Man's refusal to simply obey the WORD of GOD. <span class="bible-ref">3 John 2</span> for instance reaffirmed God's persistent intention and plan for man: <em>"Beloved, I wish above all things that thou mayest prosper and be in health, even as thy soul prosperity."</em> However, God not wanting to appear to man as a Dictator, grants man the freewill to enjoy virtually endless benefits ONLY on the condition of total obedience, to the giver of these benefits - The Almighty GOD.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donations Section -->
+        <section class="donations-section animate-on-scroll">
+            <div class="container">
+                <div class="donations-grid">
+                    <!-- Church Project Donation -->
+                    <div class="donation-card">
+                        <h3 class="donation-title">Voluntary Donation For The Church Project</h3>
+                        <div class="donation-account">
+                            <p><strong>Account No:</strong> 4150011324</p>
+                            <p><strong>Account Name:</strong> RCCG Resurrection Chapel Area HQ Aba-Ibeji</p>
+                            <!-- <p class="alternative">OR</p>
+                            <p><strong>Account No:</strong> 8104427509</p>
+                            <p><strong>Account Name:</strong> Bro Gbenga Adebisi</p> -->
+                        </div>
+                    </div>
+                    
+                    <!-- Church Welfare Donation -->
+                    <div class="donation-card">
+                        <h3 class="donation-title">Voluntary Donation For The Church Welfare Sundays</h3>
+                        <div class="donation-account">
+                            <p><strong>Account No:</strong> 4150011324</p>
+                            <p><strong>Account Name:</strong> RCCG Resurrection Chapel Area HQ Aba-Ibeji</p>
+                            <!-- <p class="alternative">OR</p>
+                            <p><strong>Account No:</strong> 2007487952</p>
+                            <p><strong>Account Name:</strong> Ajayi Tawio E</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Salvation Section -->
+        <section class="salvation-section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Do You Want To Give Your Life To Christ?</h2>
+                <h3 class="section-subtitle">Please Follow The Steps Below</h3>
+                
+                <div class="salvation-steps">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Acknowledge all your sins <span class="step-ref">Acts 2:36-38</span></h4>
+                            <p>Therefore let all the house of Israel know assuredly, that God hath made the same Jesus, whom ye have crucified, both Lord and Christ. Now when they heard this, they were pricked in their heart, and said unto Peter and to the rest of the apostles, Men and brethren, what shall we do? Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Confess those sins <span class="step-ref">Galatians 5:19-21</span></h4>
+                            <p>Now the works of the flesh are manifest, which are these; Adultery, fornication, uncleanness, lasciviousness, 20 Idolatry, witchcraft, hatred, variance, emulations, wrath, strife, seditions, heresies, 21 Envyings, murders, drunkenness, revellings, and such like: of the which I tell you before, as I have also told you in time past, that they which do such things shall not inherit the kingdom of God.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Ask for forgiveness of sins <span class="step-ref">1 John 1:9</span></h4>
+                            <p>If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Repent of those sins <span class="step-ref">Acts 3:19</span></h4>
+                            <p>Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Heavens Section -->
+        <section class="open-heavens-section animate-on-scroll">
+            <div class="container">
+                <div class="open-heavens-content">
+                    <div class="oh-info">
+                        <h2>The Open Heavens Devotional 2026</h2>
+                        <p class="oh-available">Is now available</p>
+                        <!-- <div class="app-buttons">
+                            <a href="#" class="app-btn google-play">
+                                <i class="fab fa-google-play"></i> Google Play
+                            </a>
+                            <a href="#" class="app-btn app-store">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                        </div> -->
+                    </div>
+                    <div class="oh-links">
+                        <a href="https://www.openheavenfortoday.com/" class="read-online" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online OpenHeaven
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="rccg-logo.png" alt="RCCG Logo">
+                </div>
+                
+                <div class="footer-info">
+                    <p>&copy; 2026 RCCG Resurrection Chapel. All Right Reserved.</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://web.facebook.com/groups/665163931216601" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- <a href="#" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a> -->
+                    <a href="https://www.google.com/maps/place/RCCG+Resurrection+Chapel+Area/@7.3036719,3.8573881,17z/data=!4m16!1m9!3m8!1s0x10398f00236cbd03:0x55edeabd2c33a401!2sRCCG+Resurrection+Chapel+Area!8m2!3d7.3036719!4d3.859963!9m1!1b1!16s%2Fg%2F11xs5nvhkf!3m5!1s0x10398f00236cbd03:0x55edeabd2c33a401!8m2!3d7.3036719!4d3.859963!16s%2Fg%2F11xs5nvhkf?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="social-link">
+                        <i class="fas fa-location"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@vibrantyouthrccgrp?_r=1&_d=f0kh7ml3ii7m0i&sec_uid=MS4wLjABAAAA8fifjxzGTZWzOdSwgFtem1Ykbmm10pARH0wrFaBmMK7SPUqEDgboZI12g52lARMU&share_author_id=7240511406641054726&sharer_language=en&source=h5_m&u_code=e892f28e14bf69&item_author_type=1&utm_source=copy&tt_from=copy&enable_checksum=1&utm_medium=ios&share_link_id=1F5A485C-8A7E-48AD-A554-8BADAB22B34E&user_id=7240511406641054726&sec_user_id=MS4wLjABAAAA8fifjxzGTZWzOdSwgFtem1Ykbmm10pARH0wrFaBmMK7SPUqEDgboZI12g52lARMU&social_share_type=4&ug_btm=b8727,b0&utm_campaign=client_share&share_app_id=1233" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+    <script src="gallery-cube.js"></script>
+</body>
+</html>
