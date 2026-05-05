@@ -17,7 +17,7 @@ body {
     width: 80%;
     max-width: 800px;
     /* background: rgba(0, 0, 0, 0.7); */
-    background: linear-gradient(rgba(0, 0, 0, 0.7)), url(rccg-logo.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.7)), url(image/rccg-logo.png);
     background-position: center;
     background-size: cover;
     border-radius: 20px;
