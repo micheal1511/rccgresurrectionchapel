@@ -146,7 +146,7 @@ const galleryData = [
     },
     {
         type: 'image',
-        src: 'light-up.pngg',
+        src: 'light-up.png',
         title: 'Solar Project',
         description: 'Be a partner of this light up the church project',
         category: '####',
